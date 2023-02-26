@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$font-family: 'Lato', sans-serif;
+$primaryColor: #B580D1;
+$secondaryColor: #FAF5FF;
+$blue: #1959DB;
+$textDimmerBlue: #3C4067; 
+$textDimBlue: #6F7F95;
+$textWhite: #FFFFFF;
+$textBlack: #000000;
+$defaultRadiusSize: 8px;
+$defaultbtnPadding: 13px 30px;
+$font-xm: 16px;
+$font-sm: 18px;
+$font-md: 22px;
+$font-lg: 32px;
+$font-xl: 56px; 
+$fontWeightLargest: 700;
+$fontWeightLarge: 600;
+$fontWeightMedium: 500;
+$fontWeightSmall: 400;
+
+.text-primary {color: $primaryColor}
+.text-dim-blue {color: $textDimBlue}
+.text-dimmer-blue {color: $textDimmerBlue}
+.bg-secondary-color {background: $secondaryColor}
+.disabled {opacity: 0.5}
+
+
+@mixin page-properties {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+
+@mixin default-btn {
+    background: transparent;
+    color: $textBlack;
+    padding: $defaultbtnPadding;
+    font-size: $font-sm;
+    width: fit-content;
+    border: none;
+}
+
+@mixin primary-btn {
+    background: $primaryColor;
+    color: $textWhite;
+    border-radius: $defaultRadiusSize;
+    padding: $defaultbtnPadding;
+    font-size: $font-sm;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin secondary-btn {
+    @include primary-btn;
+    background: transparent;
+    border: 1.5px solid $primaryColor;
+    color: $primaryColor;
+    cursor: pointer;
+}
+
+@mixin inputStyle {
+    border: 0.7px solid #DAD8DF;
+    border-radius: 5px;
+    width: 100%;
+    height: 52px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+@mixin backgroundImage {
+    background-image: url('../../public-asset/backgrounds/form-background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin text-property {}
+
+* {@include page-properties}
+
+.main {
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+
+        .nav-list-container {
+            display: flex;
+            gap: 42px;
+
+            .nav-list {
+                font-weight: $fontWeightLarge;
+                font-size: $font-sm;
+                line-height: 18px;
+            }
+        }
+
+        .nav-auth-btn {
+            .login-btn { @include default-btn }
+            .get-started-btn { @include primary-btn }
+        }
+    }
+
+    .alert-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        background: #EFF6FF;
+        padding: 20px;
+
+        .close-alert {
+            width: 14px;
+            height: 14px;
+            margin-left: 118px;
+            cursor: pointer;
+        }
+
+        .alert-message {
+            font-weight: $fontWeightSmall;
+            font-size: $font-xm;
+            text-align: center;
+
+            .give-feedback {
+                text-decoration: none;
+                border-bottom: 1px solid $blue;
+                color: $blue;
+            }
+        }
+    }
+
+    section.hero {
+        padding: 150px;
+        text-align: center;
+        position: relative;
+        @include backgroundImage;
+        background-image: url('../../public-asset/backgrounds/hero-background.svg');
+
+        .hero-image-container {
+
+            .hero-image-1, 
+            .hero-image-2, 
+            .hero-image-3,
+            .hero-image-4 { position: absolute; }
+
+            .hero-image-1 {
+                left: 150px;
+                top: 60px;
+            }
+
+            .hero-image-2 {
+                right: 250px;
+                top: 100px;
+            }
+
+            .hero-image-3 {
+                left: 200px;
+                bottom: 50px;
+            }
+
+            .hero-image-4 {
+                right: 300px;
+                bottom: 100px;
+            }
+        }
+
+        .hero-content-container {
+
+            .hero-header-txt {
+                font-weight: $fontWeightLargest;
+                font-size: $font-xl;
+                line-height: 70px;
+            }
+    
+            .hero-header-sub-txt {
+                font-weight: $fontWeightSmall;
+                font-size: $font-md;
+                line-height: 36px;
+                margin-top: 16px;
+            }
+    
+            .hero-btn-container {
+                margin-top: 40px;
+                
+                .get-started-btn { @include primary-btn }
+                .talk-btn {
+                    @include secondary-btn;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    section.about {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 100px;
+
+        .about-1, .about-2, .about-3 {
+            width: 350px;
+
+            p {
+                font-size: $font-md;
+                font-weight: $fontWeightLargest;
+                line-height: 26px;
+                margin-top: 26px;
+            }
+        }
+    }
+
+    section.features {
+        margin: 145px 200px;
+        @include backgroundImage;
+        background-image: url('../../public-asset/backgrounds/features-background.svg');
+
+
+        .features-header-container {
+            text-align: center;
+
+
+            .features-header-txt {
+                font-size: $font-lg;
+                font-weight: $fontWeightLarge;
+                line-height: 40px;
+            }
+        }
+
+        .features-content .content-1,
+        .content-2, .content-3, .content-4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 150px;
+
+            .content-txt {
+                width: 530px;
+
+                h2 {
+                    font-weight: $fontWeightLarge;
+                    font-size: $font-lg;
+                    line-height: 40px;
+                }
+
+                p {
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-md;
+                    line-height: 36px;
+                    color: $textDimmerBlue;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    section.plans {
+
+        .plan-header-container {
+            text-align: center;
+            margin: 200px 200px 80px 200px;
+
+            .plan-header-txt {
+                font-size: $font-lg;
+                font-weight: $fontWeightLargest;
+                line-height: 40px;
+
+                .recieve-cash {
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+            }
+
+            .plan-sub-header-txt {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 36px;
+                color: $textDimmerBlue;
+                margin-top: 16px;
+            }
+        }
+
+        .plans-content {
+
+            .billing-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                .monthly-billing {
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-xm;
+                    line-height: 19px;
+                }
+
+                .monthly-billing-toggle {
+
+                    .notification{
+
+                        .notification-btn{
+                    
+                            .switch {
+                                position: relative;
+                                display: inline-block;
+                                width: 50px;
+                                height: 24px;
+                    
+                                input {
+                                    opacity: 0;
+                                    width: 0;
+                                    height: 0;
+                                }
+                                .slider {
+                                    position: absolute;
+                                    cursor: pointer;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: #ccc;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                }
+                                .slider:before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 16px;
+                                    width: 16px;
+                                    left: 4px;
+                                    bottom: 4px;
+                                    background: #FFFFFF;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                }
+                                input:checked + .slider {
+                                    background: $blue;
+                                }
+                                input:focus + .slider {
+                                    box-shadow: 0 0 1px $blue;
+                                }
+                                input:checked + .slider:before {
+                                    -webkit-transform: translateX(26px);
+                                    -ms-transform: translateX(26px);
+                                    transform: translateX(26px);
+                                }
+                                .slider.round {
+                                    border-radius: 34px;
+                                }
+                                .slider.round:before {
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .annual-billing {
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-xm;
+                    line-height: 19px;
+                }
+
+                .perc-off {
+                    width: fit-content;
+                    padding: 5px;
+                    background: $primaryColor;
+                    border-radius: 4px;
+                    color: $textDimmerBlue;
+                }
+            }
+
+            .billing-cards-container {
+                display: flex;
+                justify-content: center;
+                gap: 80px;
+                
+                .billing-card {
+                    width: 370px;
+                    border: 1px solid #CBD5E1;
+                    border-radius: 12px;
+                    padding: 30px 20px;
+                    margin-top: 65px;
+
+                    .billing-card-header-container {
+
+                        .billing-card-header-txt {
+                            font-weight: $fontWeightLargest;
+                            font-size: $font-md;
+                            line-height: 30px;
+                        }
+
+                        .billing-card-sub-header-txt {
+                            font-weight: $fontWeightSmall;
+                            font-size: $font-sm;
+                            color: $textDimBlue;
+                            line-height: 24px;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .billing-content {
+                        margin-top: 65px;
+
+                        .billing-card-type {
+
+                            .type-txt {
+                                font-weight: $fontWeightLargest;
+                                font-size: $font-lg;
+                                line-height: 48px;
+                            }
+
+                            .sub-txt {
+                                font-weight: $fontWeightSmall;
+                                font-size: $font-xm;
+                                line-height: 19px;
+                                color: $textDimBlue
+                            }
+                        }
+
+                        .billing-card-button {
+                            @include primary-btn;
+                            width: 100%;
+                            margin-top: 35px;
+                        }
+                        
+                        .billing-features {
+                            border-top: 1px solid #ccc;
+                            padding-top: 30px;
+                            margin-top: 50px;
+
+                            .billing-features-header {
+                                font-weight: $fontWeightLargest;
+                                font-size: $font-xm;
+                                line-height: 19px;
+                            }
+
+                            .billing-feature-list-container {
+                                margin-top: 20px;
+
+                                .feature-list {
+                                    font-weight: $fontWeightSmall;
+                                    font-size: $font-xm;
+                                    line-height: 19px;
+                                    color: $textDimBlue;
+                                    padding: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .explore-more-plans {
+                color: $primaryColor;
+                text-align: center;
+                font-weight: $fontWeightMedium;
+                font-size: $font-sm;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    section.more-about-us {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 140px 200px 0 200px;
+        gap: 50px;
+
+        .about-us-1-container {
+            background: #000000;
+            border-radius: 31.7399px;
+            color: $textWhite;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            position: relative;
+
+            .content {
+                padding: 85px 60px;
+
+                h2 {
+                    font-weight: $fontWeightLarge;
+                    font-size: $font-lg;
+                    line-height: 36px;
+                    margin-top: 20px;
+                }
+    
+                p {
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-sm;
+                    line-height: 33px;
+                    margin-top: 14px;
+                }
+    
+                .learn-more-btn {
+                    @include primary-btn;
+                    padding: 10px 20px;
+                    margin-top: 36px;
+                }
+            }
+
+            .icon-arrow {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        .abouts-us-2-container {
+            background: #000000;
+            border-radius: 31.7399px;
+            color: $textWhite;
+            padding: 35px 25px 10px 25px;
+            text-align: center;
+
+            .content {
+
+                p {
+                    margin-top: 10px;
+                    font-size: $font-md;
+                    font-weight: $fontWeightSmall;
+                }
+
+                .africa-flag {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    section.stay-updated {
+
+        .illustration-seperator {
+            text-align: center;
+        }
+
+        .form-container {
+            @include backgroundImage;
+            position: relative;
+            margin: -6px 200px;
+            border-radius: 35px;
+            background-color: $secondaryColor;
+            border-top: 16px solid $primaryColor;
+
+            
+
+            form {
+                padding: 40px 135px;
+                z-index: 2;
+
+
+                header {
+
+                    h2 {
+                        font-weight: $fontWeightLarge;
+                        font-size: $font-lg;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                }
+
+                .content {
+                    margin-top: 50px;
+
+                    .side-by-side {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 24px;
+                        margin-top: 24px;
+
+                        .fullname-container,
+                        .email-container,
+                        .phone-container,
+                        .company-name-container {
+
+                            .fullname-label,
+                            .email-label,
+                            .phone-label,
+                            .company-name-label {
+                                font-weight: $fontWeightMedium;
+                                font-size: $font-sm;
+                                line-height: 20px;
+                            }
+    
+                            input { @include inputStyle }
+                            input::placeholder { color: $textDimBlue }
+    
+                        }
+                    }
+
+                    .comment-container {
+                        margin-top: 20px;
+
+                        .comment-label {
+                            font-weight: $fontWeightMedium;
+                            font-size: $font-sm;
+                            line-height: 20px;
+                        }
+
+                        textarea {
+                            @include inputStyle;
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+
+                    .proceed-btn-container {
+                        text-align: center;
+                        margin-top: 56px;
+
+                        .btn {
+                            @include primary-btn;
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer.footer {
+        background: #000000;
+        color: $textWhite;
+        padding: 50px 130px;
+        margin-top: 200px; 
+
+        .company-info-container {
+            display: grid;
+            grid-template-columns: 1fr auto auto 1fr;
+            gap: 65px;
+
+            .company-info-content {
+
+                .company-address, 
+                .company-mail,
+                .company-phone {
+                    display: flex;
+                    gap: 20px;
+                    margin-top: 33px;
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-xm;
+                    line-height: 19px;
+                    }
+            }
+    
+            .contact-help-center {
+                font-weight: $fontWeightSmall;
+                font-size: $font-xm;
+                line-height: 19px;
+                margin-top: 33px;
+
+                .help-center {
+                    margin-top: 24px;
+                }
+
+            }
+    
+            .others-container {
+                font-weight: $fontWeightSmall;
+                font-size: $font-xm;
+                line-height: 19px;
+                margin-top: 33px;
+
+                .privacy, .tos {
+                    margin-top: 24px;
+                }
+
+            }
+        }
+
+        .reservation-container {
+            border-top: 0.4px solid #FFFFFF;
+            padding-top: 24px;
+            margin-top: 61px;
+
+            h3 {
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-weight: $fontWeightSmall;
+                font-size: $font-xm;
+                line-height: 19px;
+                margin-top: 10px;
+            }
+
+            .all-rights-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: 30px;
+
+                .all-right-txt {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                .social-media-container {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

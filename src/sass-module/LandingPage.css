@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.text-primary {
+  color: #B580D1;
+}
+
+.text-dim-blue {
+  color: #6F7F95;
+}
+
+.text-dimmer-blue {
+  color: #3C4067;
+}
+
+.bg-secondary-color {
+  background: #FAF5FF;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.main .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.main .navbar .nav-list-container {
+  display: flex;
+  gap: 42px;
+}
+.main .navbar .nav-list-container .nav-list {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+.main .navbar .nav-auth-btn .login-btn {
+  background: transparent;
+  color: #000000;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+}
+.main .navbar .nav-auth-btn .get-started-btn {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+.main .alert-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background: #EFF6FF;
+  padding: 20px;
+}
+.main .alert-container .close-alert {
+  width: 14px;
+  height: 14px;
+  margin-left: 118px;
+  cursor: pointer;
+}
+.main .alert-container .alert-message {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+.main .alert-container .alert-message .give-feedback {
+  text-decoration: none;
+  border-bottom: 1px solid #1959DB;
+  color: #1959DB;
+}
+.main section.hero {
+  padding: 150px;
+  text-align: center;
+  position: relative;
+  background-image: url("../../public-asset/backgrounds/form-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../public-asset/backgrounds/hero-background.svg");
+}
+.main section.hero .hero-image-container .hero-image-1,
+.main section.hero .hero-image-container .hero-image-2,
+.main section.hero .hero-image-container .hero-image-3,
+.main section.hero .hero-image-container .hero-image-4 {
+  position: absolute;
+}
+.main section.hero .hero-image-container .hero-image-1 {
+  left: 150px;
+  top: 60px;
+}
+.main section.hero .hero-image-container .hero-image-2 {
+  right: 250px;
+  top: 100px;
+}
+.main section.hero .hero-image-container .hero-image-3 {
+  left: 200px;
+  bottom: 50px;
+}
+.main section.hero .hero-image-container .hero-image-4 {
+  right: 300px;
+  bottom: 100px;
+}
+.main section.hero .hero-content-container .hero-header-txt {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 70px;
+}
+.main section.hero .hero-content-container .hero-header-sub-txt {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  margin-top: 16px;
+}
+.main section.hero .hero-content-container .hero-btn-container {
+  margin-top: 40px;
+}
+.main section.hero .hero-content-container .hero-btn-container .get-started-btn {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+.main section.hero .hero-content-container .hero-btn-container .talk-btn {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #B580D1;
+  color: #B580D1;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.main section.about {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+.main section.about .about-1, .main section.about .about-2, .main section.about .about-3 {
+  width: 350px;
+}
+.main section.about .about-1 p, .main section.about .about-2 p, .main section.about .about-3 p {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 26px;
+}
+.main section.features {
+  margin: 145px 200px;
+  background-image: url("../../public-asset/backgrounds/form-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../public-asset/backgrounds/features-background.svg");
+}
+.main section.features .features-header-container {
+  text-align: center;
+}
+.main section.features .features-header-container .features-header-txt {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.main section.features .features-content .content-1,
+.main section.features .content-2, .main section.features .content-3, .main section.features .content-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+.main section.features .features-content .content-1 .content-txt,
+.main section.features .content-2 .content-txt, .main section.features .content-3 .content-txt, .main section.features .content-4 .content-txt {
+  width: 530px;
+}
+.main section.features .features-content .content-1 .content-txt h2,
+.main section.features .content-2 .content-txt h2, .main section.features .content-3 .content-txt h2, .main section.features .content-4 .content-txt h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+.main section.features .features-content .content-1 .content-txt p,
+.main section.features .content-2 .content-txt p, .main section.features .content-3 .content-txt p, .main section.features .content-4 .content-txt p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #3C4067;
+  margin-top: 20px;
+}
+.main section.plans .plan-header-container {
+  text-align: center;
+  margin: 200px 200px 80px 200px;
+}
+.main section.plans .plan-header-container .plan-header-txt {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.main section.plans .plan-header-container .plan-header-txt .recieve-cash {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.main section.plans .plan-header-container .plan-sub-header-txt {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #3C4067;
+  margin-top: 16px;
+}
+.main section.plans .plans-content .billing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.main section.plans .plans-content .billing-container .monthly-billing {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background: #FFFFFF;
+  transition: 0.4s;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch input:checked + .slider {
+  background: #1959DB;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch input:focus + .slider {
+  box-shadow: 0 0 1px #1959DB;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch .slider.round {
+  border-radius: 34px;
+}
+.main section.plans .plans-content .billing-container .monthly-billing-toggle .notification .notification-btn .switch .slider.round:before {
+  border-radius: 50%;
+}
+.main section.plans .plans-content .billing-container .annual-billing {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main section.plans .plans-content .billing-container .perc-off {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  background: #B580D1;
+  border-radius: 4px;
+  color: #3C4067;
+}
+.main section.plans .plans-content .billing-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card {
+  width: 370px;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin-top: 65px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-card-header-container .billing-card-header-txt {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-card-header-container .billing-card-sub-header-txt {
+  font-weight: 400;
+  font-size: 18px;
+  color: #6F7F95;
+  line-height: 24px;
+  margin-top: 10px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content {
+  margin-top: 65px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-card-type .type-txt {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-card-type .sub-txt {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6F7F95;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-card-button {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 35px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-features {
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-features .billing-features-header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-features .billing-feature-list-container {
+  margin-top: 20px;
+}
+.main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-features .billing-feature-list-container .feature-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6F7F95;
+  padding: 20px;
+}
+.main section.plans .plans-content .explore-more-plans {
+  color: #B580D1;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.main section.more-about-us {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 140px 200px 0 200px;
+  gap: 50px;
+}
+.main section.more-about-us .about-us-1-container {
+  background: #000000;
+  border-radius: 31.7399px;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+}
+.main section.more-about-us .about-us-1-container .content {
+  padding: 85px 60px;
+}
+.main section.more-about-us .about-us-1-container .content h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+}
+.main section.more-about-us .about-us-1-container .content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  margin-top: 14px;
+}
+.main section.more-about-us .about-us-1-container .content .learn-more-btn {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 36px;
+}
+.main section.more-about-us .about-us-1-container .icon-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.main section.more-about-us .abouts-us-2-container {
+  background: #000000;
+  border-radius: 31.7399px;
+  color: #FFFFFF;
+  padding: 35px 25px 10px 25px;
+  text-align: center;
+}
+.main section.more-about-us .abouts-us-2-container .content p {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.main section.more-about-us .abouts-us-2-container .content .africa-flag {
+  margin-top: 40px;
+}
+.main section.stay-updated .illustration-seperator {
+  text-align: center;
+}
+.main section.stay-updated .form-container {
+  background-image: url("../../public-asset/backgrounds/form-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: -6px 200px;
+  border-radius: 35px;
+  background-color: #FAF5FF;
+  border-top: 16px solid #B580D1;
+}
+.main section.stay-updated .form-container form {
+  padding: 40px 135px;
+  z-index: 2;
+}
+.main section.stay-updated .form-container form header h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+.main section.stay-updated .form-container form .content {
+  margin-top: 50px;
+}
+.main section.stay-updated .form-container form .content .side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container .fullname-label,
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container .email-label,
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container .phone-label,
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container .company-name-label,
+.main section.stay-updated .form-container form .content .side-by-side .email-container .fullname-label,
+.main section.stay-updated .form-container form .content .side-by-side .email-container .email-label,
+.main section.stay-updated .form-container form .content .side-by-side .email-container .phone-label,
+.main section.stay-updated .form-container form .content .side-by-side .email-container .company-name-label,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container .fullname-label,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container .email-label,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container .phone-label,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container .company-name-label,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container .fullname-label,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container .email-label,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container .phone-label,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container .company-name-label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container input,
+.main section.stay-updated .form-container form .content .side-by-side .email-container input,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container input,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container input {
+  border: 0.7px solid #DAD8DF;
+  border-radius: 5px;
+  width: 100%;
+  height: 52px;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  padding: 10px;
+}
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container input::-moz-placeholder, .main section.stay-updated .form-container form .content .side-by-side .email-container input::-moz-placeholder, .main section.stay-updated .form-container form .content .side-by-side .phone-container input::-moz-placeholder, .main section.stay-updated .form-container form .content .side-by-side .company-name-container input::-moz-placeholder {
+  color: #6F7F95;
+}
+.main section.stay-updated .form-container form .content .side-by-side .fullname-container input::placeholder,
+.main section.stay-updated .form-container form .content .side-by-side .email-container input::placeholder,
+.main section.stay-updated .form-container form .content .side-by-side .phone-container input::placeholder,
+.main section.stay-updated .form-container form .content .side-by-side .company-name-container input::placeholder {
+  color: #6F7F95;
+}
+.main section.stay-updated .form-container form .content .comment-container {
+  margin-top: 20px;
+}
+.main section.stay-updated .form-container form .content .comment-container .comment-label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.main section.stay-updated .form-container form .content .comment-container textarea {
+  border: 0.7px solid #DAD8DF;
+  border-radius: 5px;
+  width: 100%;
+  height: 52px;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+}
+.main section.stay-updated .form-container form .content .proceed-btn-container {
+  text-align: center;
+  margin-top: 56px;
+}
+.main section.stay-updated .form-container form .content .proceed-btn-container .btn {
+  background: #B580D1;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 13px 30px;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+}
+.main footer.footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 50px 130px;
+  margin-top: 200px;
+}
+.main footer.footer .company-info-container {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  gap: 65px;
+}
+.main footer.footer .company-info-container .company-info-content .company-address,
+.main footer.footer .company-info-container .company-info-content .company-mail,
+.main footer.footer .company-info-container .company-info-content .company-phone {
+  display: flex;
+  gap: 20px;
+  margin-top: 33px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main footer.footer .company-info-container .contact-help-center {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 33px;
+}
+.main footer.footer .company-info-container .contact-help-center .help-center {
+  margin-top: 24px;
+}
+.main footer.footer .company-info-container .others-container {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 33px;
+}
+.main footer.footer .company-info-container .others-container .privacy, .main footer.footer .company-info-container .others-container .tos {
+  margin-top: 24px;
+}
+.main footer.footer .reservation-container {
+  border-top: 0.4px solid #FFFFFF;
+  padding-top: 24px;
+  margin-top: 61px;
+}
+.main footer.footer .reservation-container h3 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main footer.footer .reservation-container p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 10px;
+}
+.main footer.footer .reservation-container .all-rights-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+.main footer.footer .reservation-container .all-rights-container .all-right-txt {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.main footer.footer .reservation-container .all-rights-container .social-media-container {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=LandingPage.css.map */
