@@ -209,8 +209,8 @@
   border: none;
   cursor: pointer;
   background: transparent;
-  border: 1.5px solid linear-gradient(90deg, #FF8200 1.35%, #FF002B 100%);
-  color: linear-gradient(90deg, #FF8200 1.35%, #FF002B 100%);
+  border: 1.5px solid #FF002B;
+  color: #FF002B;
   cursor: pointer;
   margin-left: 10px;
 }

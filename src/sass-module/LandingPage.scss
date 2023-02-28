@@ -68,8 +68,8 @@ $fontWeightSmall: 400;
 @mixin secondary-btn {
     @include primary-btn;
     background: transparent;
-    border: 1.5px solid $primaryColor;
-    color: $primaryColor;
+    border: 1.5px solid #FF002B;
+    color: #FF002B;
     cursor: pointer;
 }
 
@@ -243,6 +243,7 @@ $fontWeightSmall: 400;
     
             .hero-btn-container {
                 margin-top: 40px;
+                
                 
                 .get-started-btn { @include primary-btn }
                 .talk-btn {
