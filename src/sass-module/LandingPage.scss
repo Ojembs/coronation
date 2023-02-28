@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 $font-family: 'Lato', sans-serif;
-$primaryColor: #B580D1;
-$secondaryColor: #FAF5FF;
+$primaryColor: linear-gradient(90deg, #FF8200 1.35%, #FF002B 100%);
+$secondaryColor: #000000;
 $blue: #1959DB;
 $textDimmerBlue: #3C4067; 
 $textDimBlue: #6F7F95;
@@ -329,6 +329,16 @@ $fontWeightSmall: 400;
         @media(max-width: 1000px) {
             display: grid;
             margin-top: 50px;
+
+            .about-1, .about-2, .about-3 {
+    
+                p {
+                    font-size: $font-sm;
+                    font-weight: $fontWeightLargest;
+                    line-height: 26px;
+                    margin-top: 26px;
+                }
+            }
         }
     }
 
@@ -385,17 +395,59 @@ $fontWeightSmall: 400;
 
         @media(max-width: 1000px) {
             display: grid;
-            margin: 145px 0;
+            margin: 120px 0;
             padding: 0 20px;
+
+            .features-header-container {
+    
+                .features-header-txt {
+                    font-size: $font-md;
+                    line-height: 30px;
+                }
+            }
 
             .features-content .content-1,
             .content-2, .content-3, .content-4 {
                 display: grid;
+                margin-top: 50px;
 
                 img {
                     width: 100%;
                 }
+
+                .content-txt {
+
+                    h2 {
+                        font-weight: $fontWeightLarge;
+                        font-size: $font-md;
+                        line-height: 30px;
+                        margin-top: 20px;
+                    }
+    
+                    p {
+                        font-weight: $fontWeightSmall;
+                        font-size: $font-sm;
+                        line-height: 26px;
+                        color: $textDimmerBlue;
+                        margin-top: 10px;
+                    }
+    
+                    @media(max-width: 1000px) {
+                        width: 100%;
+                    }
+                }
             }
+
+            .content-1 img {order: 1}
+            .content-2 img {order: 1}
+            .content-3 img {order: 1}
+            .content-4 img {order: 1}
+
+            .content-1 div {order: 2}
+            .content-2 div {order: 2}
+            .content-3 div {order: 2}
+            .content-4 div {order: 2}
+            
         }
     }
 
@@ -425,8 +477,23 @@ $fontWeightSmall: 400;
             }
 
             @media(max-width: 1000px) {
-                margin: 200px 20px 80px 20px;
+                margin: 100px 10px 80px 10px;
                 padding: 0 20px;
+
+                .plan-header-txt {
+                    font-size: $font-md;
+                    font-weight: $fontWeightLargest;
+                    line-height: 30px;
+    
+                }
+    
+                .plan-sub-header-txt {
+                    font-weight: 400;
+                    font-size: $font-sm;
+                    line-height: 26px;
+                    color: $textDimmerBlue;
+                    margin-top: 16px;
+                }
             }
         }
 
@@ -623,6 +690,23 @@ $fontWeightSmall: 400;
 
                     .billing-card {
                         width: 100%;
+
+                        .billing-card-header-container {
+
+                            .billing-card-header-txt {
+                                font-weight: $fontWeightLargest;
+                                font-size: $font-md;
+                                line-height: 30px;
+                            }
+    
+                            .billing-card-sub-header-txt {
+                                font-weight: $fontWeightSmall;
+                                font-size: $font-xm;
+                                color: $textDimBlue;
+                                line-height: 24px;
+                                margin-top: 10px;
+                            }
+                        }
                     }
                     
                 }
@@ -756,7 +840,8 @@ $fontWeightSmall: 400;
             margin: -6px 200px;
             border-radius: 35px;
             background-color: $secondaryColor;
-            border-top: 16px solid $primaryColor;
+            border-top: 16px solid #FF002B;
+            color: $textWhite;
 
             form {
                 padding: 40px 135px;
