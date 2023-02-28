@@ -11,6 +11,7 @@ $textBlack: #000000;
 $defaultRadiusSize: 8px;
 $defaultbtnPadding: 13px 30px;
 $font-xm: 16px;
+$font-xxm: 14px;
 $font-sm: 18px;
 $font-md: 22px;
 $font-lg: 32px;
@@ -41,6 +42,11 @@ $fontWeightSmall: 400;
     font-size: $font-sm;
     width: fit-content;
     border: none;
+
+    @media(max-width: 1000px) {
+        padding: 10px;
+        font-size: $font-xxm;
+    }
 }
 
 @mixin primary-btn {
@@ -52,6 +58,11 @@ $fontWeightSmall: 400;
     width: fit-content;
     border: none;
     cursor: pointer;
+
+    @media(max-width: 1000px) {
+        padding: 10px;
+        font-size: $font-xxm;
+    }
 }
 
 @mixin secondary-btn {
@@ -107,6 +118,24 @@ $fontWeightSmall: 400;
             .login-btn { @include default-btn }
             .get-started-btn { @include primary-btn }
         }
+
+        @media(max-width: 1000px) {
+            justify-content: space-between;
+            align-items: none;
+
+            .nav-brand {
+                width: 120px;
+            }
+
+            .nav-list-container {
+                display: none;
+            }
+
+            .nav-auth-btn {
+                display: flex;
+                gap: 15px;
+            }
+        }
     }
 
     .alert-container {
@@ -132,6 +161,32 @@ $fontWeightSmall: 400;
                 text-decoration: none;
                 border-bottom: 1px solid $blue;
                 color: $blue;
+            }
+        }
+
+        @media(max-width: 1000px) {
+            grid-template-columns: auto auto;
+            background: #EFF6FF;
+            padding: 20px;
+
+
+            .close-alert {
+                margin-left: 0px;
+                margin-right: 2px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .alert-message {
+                font-weight: $fontWeightSmall;
+                font-size: $font-xxm;
+                text-align: center;
+    
+                .give-feedback {
+                    text-decoration: none;
+                    border-bottom: 1px solid $blue;
+                    color: $blue;
+                }
             }
         }
     }
@@ -195,6 +250,61 @@ $fontWeightSmall: 400;
                     margin-left: 10px;
                 }
             }
+
+            @media(max-width: 1000px) {
+                
+                .hero-header-txt {
+                    font-weight: $fontWeightLargest;
+                    font-size: $font-lg;
+                    line-height: 45px;
+                }
+
+                .hero-header-sub-txt {
+                    font-weight: $fontWeightSmall;
+                    font-size: $font-sm;
+                    line-height: 26px;
+                }
+            }
+        }
+
+        @media(max-width: 1500px) {
+           
+            .hero-image-container {
+
+                .hero-image-1, 
+                .hero-image-2, 
+                .hero-image-3,
+                .hero-image-4 { position: absolute; }
+    
+                .hero-image-1 {
+                    left: 50px;
+                    top: 60px;
+                }
+    
+                .hero-image-2 {
+                    right: 50px;
+                    top: 100px;
+                }
+    
+                .hero-image-3 {
+                    left: 50px;
+                    bottom: 50px;
+                }
+    
+                .hero-image-4 {
+                    right: 150px;
+                    bottom: 100px;
+                }
+            }
+    
+        }
+
+        @media(max-width: 1000px) {
+            padding: 20px;
+
+            .hero-image-container {
+                display: none;
+            }
         }
     }
 
@@ -214,6 +324,11 @@ $fontWeightSmall: 400;
                 line-height: 26px;
                 margin-top: 26px;
             }
+        }
+
+        @media(max-width: 1000px) {
+            display: grid;
+            margin-top: 50px;
         }
     }
 
@@ -257,6 +372,29 @@ $fontWeightSmall: 400;
                     color: $textDimmerBlue;
                     margin-top: 20px;
                 }
+
+                @media(max-width: 1000px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media(max-width: 1500px) {
+            margin: 145px 50px;
+        }
+
+        @media(max-width: 1000px) {
+            display: grid;
+            margin: 145px 0;
+            padding: 0 20px;
+
+            .features-content .content-1,
+            .content-2, .content-3, .content-4 {
+                display: grid;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -284,6 +422,11 @@ $fontWeightSmall: 400;
                 line-height: 36px;
                 color: $textDimmerBlue;
                 margin-top: 16px;
+            }
+
+            @media(max-width: 1000px) {
+                margin: 200px 20px 80px 20px;
+                padding: 0 20px;
             }
         }
 
@@ -375,6 +518,11 @@ $fontWeightSmall: 400;
                     border-radius: 4px;
                     color: $textDimmerBlue;
                 }
+
+                @media(max-width: 1000px) {
+                    // display: grid;
+                    
+                }
             }
 
             .billing-cards-container {
@@ -383,7 +531,7 @@ $fontWeightSmall: 400;
                 gap: 80px;
                 
                 .billing-card {
-                    width: 370px;
+                    width: 400px;
                     border: 1px solid #CBD5E1;
                     border-radius: 12px;
                     padding: 30px 20px;
@@ -455,6 +603,28 @@ $fontWeightSmall: 400;
                             }
                         }
                     }
+
+                    @media(max-width: 1000px) {
+                        display: grid;
+                        width: 100%;
+                    }
+                }
+
+                @media(max-width: 1500px) {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 20px;
+                    gap: 20px;
+                }
+
+                @media(max-width: 1000px) {
+                    display: block;
+                    margin: 0 10px;
+
+                    .billing-card {
+                        width: 100%;
+                    }
+                    
                 }
             }
 
@@ -465,6 +635,8 @@ $fontWeightSmall: 400;
                 font-size: $font-sm;
                 margin-top: 50px;
             }
+
+            
         }
     }
 
@@ -533,6 +705,43 @@ $fontWeightSmall: 400;
                 }
             }
         }
+
+        @media(max-width: 1500px) {
+            margin: 100px 10px -60px 10px;
+            gap: 10px;
+
+            .about-us-1-container {
+                display: block;
+                margin-bottom: 50px;
+                
+                img {
+                    display: none;
+                }
+            }
+
+            .abouts-us-2-container {
+                margin-bottom: -50px;
+            }
+        }
+
+        @media(max-width: 1000px) {
+            display: block;
+            margin: 100px 10px 50px 10px;
+            gap: 50px;
+
+            .about-us-1-container {
+                display: block;
+                margin-bottom: 50px;
+                
+                img {
+                    display: none;
+                }
+            }
+
+            .abouts-us-2-container {
+                margin-bottom: -50px;
+            }
+        }
     }
 
     section.stay-updated {
@@ -549,12 +758,9 @@ $fontWeightSmall: 400;
             background-color: $secondaryColor;
             border-top: 16px solid $primaryColor;
 
-            
-
             form {
                 padding: 40px 135px;
                 z-index: 2;
-
 
                 header {
 
@@ -622,6 +828,42 @@ $fontWeightSmall: 400;
                     }
                 }
             }
+
+            @media(max-width: 1500px) {
+                margin: -6px 20px;
+            }
+
+            @media(max-width: 1000px) {
+                margin: -6px 20px;
+
+                form {
+                    padding: 40px 10px;
+                    z-index: 2;
+
+                    header {
+
+                        h2 {
+                            font-size: $font-md;
+                            line-height: 20px;
+                        }
+                    }
+
+                    .content {
+    
+                        .side-by-side {
+                            display: block;
+                            margin-top: 20px;
+
+                            .fullname-container,
+                            .email-container,
+                            .phone-container,
+                            .company-name-container {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -673,6 +915,10 @@ $fontWeightSmall: 400;
                 }
 
             }
+
+            @media(max-width: 1000px) {
+                grid-template-columns: 1fr;
+            }
         }
 
         .reservation-container {
@@ -711,6 +957,20 @@ $fontWeightSmall: 400;
                     display: flex;
                     gap: 20px;
                 }
+
+                @media(max-width: 1000px) {
+                    display: grid;
+                    justify-content: none;
+                }
+            }
+        }
+
+        @media(max-width: 1000px) {
+            padding: 20px 20px;
+            margin-top: 100px;
+
+            .social-media-container {
+                margin-top: 20px;
             }
         }
     }

@@ -50,6 +50,12 @@
   width: fit-content;
   border: none;
 }
+@media (max-width: 1000px) {
+  .main .navbar .nav-auth-btn .login-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 .main .navbar .nav-auth-btn .get-started-btn {
   background: #B580D1;
   color: #FFFFFF;
@@ -60,6 +66,28 @@
   width: fit-content;
   border: none;
   cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .main .navbar .nav-auth-btn .get-started-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .main .navbar {
+    justify-content: space-between;
+    align-items: none;
+  }
+  .main .navbar .nav-brand {
+    width: 120px;
+  }
+  .main .navbar .nav-list-container {
+    display: none;
+  }
+  .main .navbar .nav-auth-btn {
+    display: flex;
+    gap: 15px;
+  }
 }
 .main .alert-container {
   display: grid;
@@ -83,6 +111,29 @@
   text-decoration: none;
   border-bottom: 1px solid #1959DB;
   color: #1959DB;
+}
+@media (max-width: 1000px) {
+  .main .alert-container {
+    grid-template-columns: auto auto;
+    background: #EFF6FF;
+    padding: 20px;
+  }
+  .main .alert-container .close-alert {
+    margin-left: 0px;
+    margin-right: 2px;
+    width: 10px;
+    height: 10px;
+  }
+  .main .alert-container .alert-message {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+  }
+  .main .alert-container .alert-message .give-feedback {
+    text-decoration: none;
+    border-bottom: 1px solid #1959DB;
+    color: #1959DB;
+  }
 }
 .main section.hero {
   padding: 150px;
@@ -141,6 +192,12 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .main section.hero .hero-content-container .hero-btn-container .get-started-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 .main section.hero .hero-content-container .hero-btn-container .talk-btn {
   background: #B580D1;
   color: #FFFFFF;
@@ -157,6 +214,56 @@
   cursor: pointer;
   margin-left: 10px;
 }
+@media (max-width: 1000px) {
+  .main section.hero .hero-content-container .hero-btn-container .talk-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.hero .hero-content-container .hero-header-txt {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .main section.hero .hero-content-container .hero-header-sub-txt {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 1500px) {
+  .main section.hero .hero-image-container .hero-image-1,
+  .main section.hero .hero-image-container .hero-image-2,
+  .main section.hero .hero-image-container .hero-image-3,
+  .main section.hero .hero-image-container .hero-image-4 {
+    position: absolute;
+  }
+  .main section.hero .hero-image-container .hero-image-1 {
+    left: 50px;
+    top: 60px;
+  }
+  .main section.hero .hero-image-container .hero-image-2 {
+    right: 50px;
+    top: 100px;
+  }
+  .main section.hero .hero-image-container .hero-image-3 {
+    left: 50px;
+    bottom: 50px;
+  }
+  .main section.hero .hero-image-container .hero-image-4 {
+    right: 150px;
+    bottom: 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.hero {
+    padding: 20px;
+  }
+  .main section.hero .hero-image-container {
+    display: none;
+  }
+}
 .main section.about {
   text-align: center;
   display: flex;
@@ -172,6 +279,12 @@
   font-weight: 700;
   line-height: 26px;
   margin-top: 26px;
+}
+@media (max-width: 1000px) {
+  .main section.about {
+    display: grid;
+    margin-top: 50px;
+  }
 }
 .main section.features {
   margin: 145px 200px;
@@ -214,6 +327,32 @@
   color: #3C4067;
   margin-top: 20px;
 }
+@media (max-width: 1000px) {
+  .main section.features .features-content .content-1 .content-txt,
+  .main section.features .content-2 .content-txt, .main section.features .content-3 .content-txt, .main section.features .content-4 .content-txt {
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  .main section.features {
+    margin: 145px 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.features {
+    display: grid;
+    margin: 145px 0;
+    padding: 0 20px;
+  }
+  .main section.features .features-content .content-1,
+  .main section.features .content-2, .main section.features .content-3, .main section.features .content-4 {
+    display: grid;
+  }
+  .main section.features .features-content .content-1 img,
+  .main section.features .content-2 img, .main section.features .content-3 img, .main section.features .content-4 img {
+    width: 100%;
+  }
+}
 .main section.plans .plan-header-container {
   text-align: center;
   margin: 200px 200px 80px 200px;
@@ -233,6 +372,12 @@
   line-height: 36px;
   color: #3C4067;
   margin-top: 16px;
+}
+@media (max-width: 1000px) {
+  .main section.plans .plan-header-container {
+    margin: 200px 20px 80px 20px;
+    padding: 0 20px;
+  }
 }
 .main section.plans .plans-content .billing-container {
   display: flex;
@@ -310,7 +455,7 @@
   gap: 80px;
 }
 .main section.plans .plans-content .billing-cards-container .billing-card {
-  width: 370px;
+  width: 400px;
   border: 1px solid #CBD5E1;
   border-radius: 12px;
   padding: 30px 20px;
@@ -355,6 +500,12 @@
   width: 100%;
   margin-top: 35px;
 }
+@media (max-width: 1000px) {
+  .main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-card-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 .main section.plans .plans-content .billing-cards-container .billing-card .billing-content .billing-features {
   border-top: 1px solid #ccc;
   padding-top: 30px;
@@ -374,6 +525,29 @@
   line-height: 19px;
   color: #6F7F95;
   padding: 20px;
+}
+@media (max-width: 1000px) {
+  .main section.plans .plans-content .billing-cards-container .billing-card {
+    display: grid;
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  .main section.plans .plans-content .billing-cards-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    gap: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.plans .plans-content .billing-cards-container {
+    display: block;
+    margin: 0 10px;
+  }
+  .main section.plans .plans-content .billing-cards-container .billing-card {
+    width: 100%;
+  }
 }
 .main section.plans .plans-content .explore-more-plans {
   color: #B580D1;
@@ -424,6 +598,12 @@
   padding: 10px 20px;
   margin-top: 36px;
 }
+@media (max-width: 1000px) {
+  .main section.more-about-us .about-us-1-container .content .learn-more-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 .main section.more-about-us .about-us-1-container .icon-arrow {
   position: absolute;
   right: 0;
@@ -443,6 +623,39 @@
 }
 .main section.more-about-us .abouts-us-2-container .content .africa-flag {
   margin-top: 40px;
+}
+@media (max-width: 1500px) {
+  .main section.more-about-us {
+    margin: 100px 10px -60px 10px;
+    gap: 10px;
+  }
+  .main section.more-about-us .about-us-1-container {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .main section.more-about-us .about-us-1-container img {
+    display: none;
+  }
+  .main section.more-about-us .abouts-us-2-container {
+    margin-bottom: -50px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.more-about-us {
+    display: block;
+    margin: 100px 10px 50px 10px;
+    gap: 50px;
+  }
+  .main section.more-about-us .about-us-1-container {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .main section.more-about-us .about-us-1-container img {
+    display: none;
+  }
+  .main section.more-about-us .abouts-us-2-container {
+    margin-bottom: -50px;
+  }
 }
 .main section.stay-updated .illustration-seperator {
   text-align: center;
@@ -553,6 +766,40 @@
   cursor: pointer;
   width: 300px;
 }
+@media (max-width: 1000px) {
+  .main section.stay-updated .form-container form .content .proceed-btn-container .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1500px) {
+  .main section.stay-updated .form-container {
+    margin: -6px 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .main section.stay-updated .form-container {
+    margin: -6px 20px;
+  }
+  .main section.stay-updated .form-container form {
+    padding: 40px 10px;
+    z-index: 2;
+  }
+  .main section.stay-updated .form-container form header h2 {
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .main section.stay-updated .form-container form .content .side-by-side {
+    display: block;
+    margin-top: 20px;
+  }
+  .main section.stay-updated .form-container form .content .side-by-side .fullname-container,
+  .main section.stay-updated .form-container form .content .side-by-side .email-container,
+  .main section.stay-updated .form-container form .content .side-by-side .phone-container,
+  .main section.stay-updated .form-container form .content .side-by-side .company-name-container {
+    margin-top: 20px;
+  }
+}
 .main footer.footer {
   background: #000000;
   color: #FFFFFF;
@@ -592,6 +839,11 @@
 .main footer.footer .company-info-container .others-container .privacy, .main footer.footer .company-info-container .others-container .tos {
   margin-top: 24px;
 }
+@media (max-width: 1000px) {
+  .main footer.footer .company-info-container {
+    grid-template-columns: 1fr;
+  }
+}
 .main footer.footer .reservation-container {
   border-top: 0.4px solid #FFFFFF;
   padding-top: 24px;
@@ -624,4 +876,19 @@
 .main footer.footer .reservation-container .all-rights-container .social-media-container {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 1000px) {
+  .main footer.footer .reservation-container .all-rights-container {
+    display: grid;
+    justify-content: none;
+  }
+}
+@media (max-width: 1000px) {
+  .main footer.footer {
+    padding: 20px 20px;
+    margin-top: 100px;
+  }
+  .main footer.footer .social-media-container {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=LandingPage.css.map */
